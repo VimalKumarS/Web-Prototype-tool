@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<textarea id="txtarea" style="height: 150px; width: 200px;  ">
+
+</textarea>
+
+<button id="idSubmit" onclick="myFunction()">click me</button>
+http://stackoverflow.com/questions/1271516/executing-anonymous-functions-created-using-javascript-eval
+<script>
+    function myFunction() {
+        var js=document.getElementById("txtarea").value ;
+        //eval("var x="+js);
+        //alert(x);
+        var func = new Function('alert("hello");');
+        func();
+        var se = document.createElement('script');
+        se.setAttribute('type', 'text/javascript');
+        se.appendChild(document.createTextNode('alert(1)'));
+        document.getElementsByTagName('head').item(0).appendChild(se);
+    }
+</script>
+</body>
+</html>

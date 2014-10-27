@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="main.js"></script>
+
+</head>
+<body>
+
+<div id="divNavigator" style="float: left; position: absolute; margin-left: 30%; margin-top: 5%">
+    <div id="triangle-left" style="float: left;"></div>
+    <label id="lblImageName" style="position: absolute;margin-left: 35%"></label>
+    <div id="triangle-right" style="float: left; margin-left: 457px"></div>
+</div>
+<div id="helpmenu" style="float: right;position: absolute;display: none; margin-left: 70%; margin-top: 5%; width:300px;  border: 1px solid black;">
+    <ul class="_">
+        <li>Upload file, click on choose file</li>
+        <li>Drag on center pane, to add the action</li>
+        <li>Select next screen, where you want to move on next screen </li>
+        <li>Click on Add Event </li>
+        <li>Click on Preview</li>
+    </ul>
+</div>
+<div  id="main" style="position: relative">
+<div id="lsboxImages" style="margin-top:10%; float: left;position: relative;  border: 1px solid black; width: 22%;height:458px;overflow: auto;">
+   <!-- <div>Slide1
+    <img src="image/Slide1.JPG" name="Slide1" id="img1" width="250px" height="250px">
+    </div>
+    <div>Slide2
+    <img src="image/Slide2.JPG" name="Slide2" id="img2" width="250px" height="250px">
+    </div>-->
+
+</div>
+
+<div onmousedown="return false" id="YDR-Frame" class="frame">
+
+<img id="targetImage" src="image/Sample.JPG"  name="" width="100%" height="455px">
+
+
+<div id="divDragable" ></div>
+</div>
+
+<div id="help"><img src="p-trans.gif" alt="" style="float: right;position: relative;margin-top: 15%;  margin-right: 3%;cursor: pointer;  height: 40px;width: 40px"/></div>
+<div id="status2" style="float: right;margin-right: 3%;  position: relative; border: 1px solid black;">
+    <div style="float: left; position: absolute; margin-left: 0%; ">
+        <input type="file" id="FileLocation" name="files[]" multiple>
+    </div>
+    <table width="340px" >
+        <tr>
+            <td colspan="2" ><br/><br/>Selection :
+
+                <div id="selection" class="selectiondiv"></div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div>
+                    <select id="lsbox" name="lsbox"  style="width:330px" multiple>
+                        <option value="dragImage">Click and drag inside the image</option>
+                    </select>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+            Select next screen :
+            </td>
+            <td>
+                <select id="imgSelect" name="imgSelect" style="min-width:200px; ">
+
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+
+                <button id="btnAddEvent" >Add Event</button>
+                <button id="btnRemoveEvent" >Remove Event</button>
+                <button id="btnPreview" >Preview</button>
+            </td>
+        </tr>
+    </table>
+
+
+</div>
+
+
+</div>
+
+
+<div id="preview" style="display: none;">
+    <div>
+    <div title="Close" class="close">X</div>
+    <img id="previewImage"  width="455px" height="455px">
+    </div>
+</div>
+
+</body>
+</html>
